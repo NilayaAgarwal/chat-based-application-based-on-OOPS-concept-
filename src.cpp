@@ -1,13 +1,8 @@
-#include<iostream>
-#include<map>
-#include<vector>
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-void page1();
-void page2(string);
+void page1();                                    // introduction screen 
+void page2(string);                              //  main screen   
 map<string,string> user;
 
 class frnd
@@ -32,7 +27,7 @@ public:
 
 
 
-void frnd::chat_on(string uname,string reciepient,char *message)
+void frnd::chat_on(string uname,string reciepient,char *message)    //checks whether another user exists or not, if yes, then it initiates chat between the users. It also keeps the count of messages between the sender and recipient.
 {
     int flag=0;
     sms[reciepient].sender=uname;
@@ -70,7 +65,7 @@ sms[reciepient].num_of_message++;
 
 
 
-void frnd::inbox(string uname)
+void frnd::inbox(string uname)                                        //serves the purpose of a standard inbox in which we can see all the conversations
 {
     cout<<"\nWelcome "<<uname<<" to your Inbox\n\n";
     cout<<"All Messages in your Inbox:\n\n";
@@ -81,7 +76,7 @@ void frnd::inbox(string uname)
     }
 }
 
-void frnd::addfrnd(string uname)
+void frnd::addfrnd(string uname)                                       //asks for  a username to be added as friend, then verifies if the user exists or not 
 {
     vector<string>::iterator iv;
     map<string,string>::iterator iuser;
@@ -136,7 +131,7 @@ else if(flag3)
 
 }
 
-void frnd::dispfrnd(string uname)
+void frnd::dispfrnd(string uname)                                           //shows the complete list of friends for a user
 {
     int c=0;
     vector<string>::iterator i;
@@ -150,7 +145,7 @@ void frnd::dispfrnd(string uname)
     cout<<endl<<endl<<"\nTotal friends: "<<c;
 }
 
-void frnd::unfrnd(string uname)
+void frnd::unfrnd(string uname)                                             //First check whether the entered user is a friend or not and then unfriends that person
 {
     if(flist.empty())
     {
@@ -193,7 +188,7 @@ void page1()
 {
     int flag=0,choice;
 
-cout<<"\n\t\t\tWELCOME TO THE V-MESSENGER\n";
+cout<<"\n\t\t\tWELCOME TO THE DTU-MESSENGER\n";
 
 
 
